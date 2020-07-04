@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Home</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-</head>
-<body>
+{% extends 'portfolio/base.html' %}
+{% block data %}
+
+     <h1>Abdullah's Portfolio</h1>
+    <a href="{% url 'blog:all_blog' %}">Blogs</a>
+    <br>
+
+    {% load static %}
+
+    <img src="{% static 'portfolio/AbdullahNaveed.jpeg'  %}">
+    <h1>
+        <a href="{% static 'portfolio/CV(Abdullah).pdf' %}">Resume</a>
+    </h1>
     <h1>This is my Personal Portfolio Home Page</h1>
     <h2>Enjoy</h2>
     <h1>
@@ -18,7 +20,7 @@
         <br>
         {{ project.discription }}
         <br>
-        <img src="{{ project.image.url }}">
+        <img src="{{ project.image.url }}" width="340" height="240">
         <br>
         {% if project.url %}
         <a href="{{ project.url }}" >Link</a>
@@ -26,7 +28,5 @@
 
 
         {% endfor %}
-    </h1>
 
-</body>
-</html>
+{% endblock %}
