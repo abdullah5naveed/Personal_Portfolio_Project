@@ -11,14 +11,14 @@
   <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'portfolio/custom.css'%}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     
     <link rel="icon" type="image/jpeg" href="{% static 'Portfolio/AbdullahNaveed.jpeg' %}">
     <title>Abdullah Naveed</title>
 </head>
 
 <body>
-  <nav id="topNav" class="navbar navbar-expand-md navbar-light"></nav>
+  <nav id="topNav" class="navbar navbar-expand-md navbar-light">
     <div class="container">
       <a class="navbar-brand" href="{% url 'home' %}">
         <img src="{% static 'portfolio/AbdullahNaveed.jpeg' %}" width="30" height="30" class="d-inline-block aline-top" alt="Abdullah's Logo">
@@ -39,7 +39,7 @@
             <a class="nav-link" href="https://twitter.com" target="_blank">Twitter</a>
           </li>
           <li class="nav-item">
-            <a roll="button=" href="{% url 'blog:all_blog' %}" role="button">Blogs</a>
+            <a roll="button=" href="{% url 'blog:all_blog' %}" class="btn btn-primary">Blogs</a>
           </li>
         </ul>
       </div>
