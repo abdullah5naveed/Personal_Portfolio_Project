@@ -3,14 +3,16 @@
 
 {% block data %}
     <div class="row justify-content-center my-3">
-        <div class="col-5">
-            <img class="img-fluid" src="{% static 'portfolio/AbdullahFiraas.jpg' %}">
+        <div class="container col-5">
+            <img class="img-fluid rounded-circle"src="{% static 'portfolio/AbdullahFiraas.jpg' %}">
         </div>
     </div>
 
     <div class="row justify-content-center mb-3">
         <div class="col-md-9 text-center">
-            <h1 id="hometext" class="font-weight-bold">Abdullah Naveed's Portfolio, Lives in Lahore</h1>
+            <h1 id="hometext" class="font-weight-bold">Abdullah Naveed is Commander In-Chief</h1>
+            <h1 id="hometext" class="font-weight-bold">Python Web Developer (Django)</h1>
+            <h1 id="hometext" class="font-weight-bold">Lahore,Pakistan</h1>
         </div>
     </div>
 
@@ -18,18 +20,19 @@
     <hr>
 
     <div class="row">
+        
         {% for project in projects %}
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6 border border-light rounded">
                 {% if project.url %}
-                    <a href="{{ project.url }}">
-                        <img class="img-fluid mb-2" src="{{ project.image.url }}">
-                    </a>
-                {% else %}
-                    <img class="img-fluid mb-2" src="{{ project.image.url }}">
-                {% endif %}
-                <h3>{{ project.title }}</h3>
-                <p>{{ project.discription }}</p>
-            </div>
+                       <a href="{{ project.url }}" target="_blank">
+                           <img class="img-thumbnail  mb-2 rounded" src="{{ project.image.url }}">
+                       </a>
+                   {% else %}
+                       <img class="img-thumbnail mb-2 rounded" src="{{ project.image.url }}">
+                   {% endif %}
+                   <h3>{{ project.title }}</h3>
+                   <p>{{ project.discription }}</p>
+           </div>
         {% endfor %}
     </div>
 {% endblock %}

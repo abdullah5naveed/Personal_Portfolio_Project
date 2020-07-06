@@ -11,14 +11,15 @@
   <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'portfolio/custom.css'%}">
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
     
     <link rel="icon" type="image/jpeg" href="{% static 'Portfolio/AbdullahNaveed.jpeg' %}">
     <title>Abdullah Naveed</title>
 </head>
 
 <body>
-  <nav id="topNav" class="navbar navbar-expand-md navbar-light">
+
+  <nav id="topNav" class="navbar sticky-top navbar-expand-md navbar-light" style="background-color: #e3f2fd;">
     <div class="container">
       <a class="navbar-brand" href="{% url 'home' %}">
         <img src="{% static 'portfolio/AbdullahNaveed.jpeg' %}" width="30" height="30" class="d-inline-block aline-top" alt="Abdullah's Logo">
@@ -46,9 +47,14 @@
     </div>
   </nav>
 
+
   <div class="container">
     {% block data %} {% endblock %}   
   </div>
+
+<div class="row justify-content-center">
+  <p class="text-center col-mt-3">copyright @AbdullahNaveed</p>
+</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

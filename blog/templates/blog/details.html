@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block data %}
-    
+    <div class="container border border-white">
     <h1 class="text-center mt-5" id="blogdetailtitle">
         {{ blog.blog_title }}
     </h1>
@@ -10,7 +10,8 @@
     <h5 class="text-center text-muted mb-5">
         {{ blog.blog_date|date:'F jS, Y'}}
     </h5>
-
-    {{ blog.blog_description|safe }}
-
+    <p class="text-justify">
+        {{ blog.blog_description|safe }}
+    </p>
+    </div>
 {% endblock %}
